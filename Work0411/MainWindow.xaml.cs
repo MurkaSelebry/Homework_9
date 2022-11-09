@@ -23,12 +23,22 @@ namespace Work0411
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
-            Background = btn.Foreground;
+            Button button = sender as Button;
+            button.Background = button.Foreground;
+        }
+
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            var childrens = WrapPanelColors.Children.GetEnumerator();
+            while (childrens.MoveNext())
+            {
+                (childrens.Current as Button).Background = (sender as Button).Background;
+            }
         }
     }
 }
