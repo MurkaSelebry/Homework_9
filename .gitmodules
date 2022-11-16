@@ -1,0 +1,3 @@
+[submodule "PasswordValidatorWPFSimple"]
+	path = PasswordValidatorWPFSimple
+	url = https://github.com/MurkaSelebry/PasswordValidatorWPFSimple.git
